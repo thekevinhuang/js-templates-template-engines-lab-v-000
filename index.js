@@ -28,6 +28,6 @@ function postComment() {
   let commentBody = document.getElementById('commentText').value
   let commenter = document.getElementById('commenter').value
 
-  commentDiv.innerHTML += commentTemplate({commentText:commentBody, commentAuthor: commenter})
+  commentDiv.innerHTML += commentTemplate({commentBody:commentBody, commentAuthor: commenter})
 
 }
