@@ -17,10 +17,10 @@ function createPost() {
   let postHTML = postTemplate({postAuthor: postAuthor, postBody: postBody, postTitle: postTitle})
 
   postDiv.innerHTML += postHTML
-  
+
   document.getElementsByTagName("footer")[0].innerHTML +=commentTemplate()
 
-  
+
 }
 
 function postComment() {
