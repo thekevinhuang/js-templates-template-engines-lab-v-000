@@ -5,11 +5,41 @@
   </head>
   <body>
     <main>
+<<<<<<< HEAD
       <form id="post-form" onSubmit="createPost">
         Post Title: <input type="text" id="postTitle"><br>
         Post Author: <input type="text" id="postAuthor"><br>
         <input type="submit">
       </form>
+=======
+      <div id="page-template">
+        <div class="sidebar">
+
+        </div>
+        <div class="post">
+          <div id="post-template">
+            <article class="">
+              <header>
+
+              </header>
+              <footer></footer>
+            </article>
+            <div id="comments-template">
+              <form id="newComment" onSubmit ="postComment()">
+
+              </form>
+              <div id="comment-template">
+
+                <footer></footer>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form id="post-form" onSubmit="createPost()">
+
+        </form>
+      </div>
+>>>>>>> 1b9b653fd25f51c1b4d254359a81a19b75ee2a66
     </main>
     <script src="node_modules/lodash/lodash.min.js"></script>
     <script src="index.js"></script>
