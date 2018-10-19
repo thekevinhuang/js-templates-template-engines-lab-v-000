@@ -60,8 +60,9 @@
     </script>
     <script id="post-template" type="text/x-lodash-template">
       <article>
-        <header></header>
-        <footer></footer>
+        <header><%-postTitle%></header>
+        <p><%-postBody%></p>
+        <footer>Posted by: <%-postAuthor%></footer>
       </article>
     </script>
     <script id="comments-template" type="text/x-lodash-template">
@@ -73,7 +74,8 @@
       </form>
     </script>
     <script id="comment-template" type="text/x-lodash-template">
-      <footer></footer>
+      <p><%-commentBody%>
+      <footer>Posted by: <%-commentAuthor%></footer>
     </script>
   </body>
 </html>

@@ -12,7 +12,7 @@ function createPost() {
   let postTemplateFn = _.template(postTemplate)
   let pageTemplateFn = _.template(pageTemplate)
 
-  let 
+  let
 }
 
 function postComment() {
@@ -20,4 +20,3 @@ function postComment() {
   let commentTemplateFn = _.template(commentTemplate)
 
 }
-
