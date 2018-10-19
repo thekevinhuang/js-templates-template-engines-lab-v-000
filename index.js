@@ -22,7 +22,12 @@ function createPost() {
 }
 
 function postComment() {
-  let commentTemplate = document.getElementById('comment-template').innerHTML
-  let commentTemplateFn = _.template(commentTemplate)
+  let commentTemplate = _.template(document.getElementById('comment-template').innerHTML)
+
+  let commentDiv = document.getElementById("comments")
+  let commentBody = document.getElementById('commentText').value
+  let commenter = document.getElementById('commenter').value
+
+  commentDiv += commentTemplate({commentText:commentBody, commentAuthor: commenter})
 
 }
