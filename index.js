@@ -8,9 +8,7 @@ function createPost() {
   let postBody = document.getElementById('postBody').value
   let postAuthor = document.getElementById('postAuthor').value
 
-  let mainDiv = document.getElementsByTagName("main")[0]
-
-  mainDiv.innerHTML += pageTemplate()
+  document.getElementsByTagName("main")[0].innerHTML += pageTemplate()
 
   let postDiv = document.getElementById("post")
 
