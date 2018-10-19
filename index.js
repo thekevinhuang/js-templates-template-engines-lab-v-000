@@ -8,11 +8,18 @@ function createPost() {
   let postBody = document.getElementById('postBody').value
   let postAuthor = document.getElementById('postAuthor').value
 
-  let mainDiv = document.getElementsByTagName("main")
-  let postTemplateFn = _.template(postTemplate)
+  let mainDiv = document.getElementsByTagName("main")[0]
+  
+  
   let pageTemplateFn = _.template(pageTemplate)
+  
+  mainDiv.innerHTML += pageTemplateFn()
+  
+  let postTemplateFn = _.template(postTemplate)
 
-  let
+  let postDiv = document.getElementById("post")
+    
+  let postHTML = postTemplateFn({postAuthor: postAuthor, postBody: postBody, postTitle: postTitle})
 }
 
 function postComment() {
