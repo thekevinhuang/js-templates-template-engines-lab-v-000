@@ -9,17 +9,19 @@ function createPost() {
   let postAuthor = document.getElementById('postAuthor').value
 
   let mainDiv = document.getElementsByTagName("main")[0]
-  
-  
+
+
   let pageTemplateFn = _.template(pageTemplate)
-  
+
   mainDiv.innerHTML += pageTemplateFn()
-  
+
   let postTemplateFn = _.template(postTemplate)
 
   let postDiv = document.getElementById("post")
-    
+
   let postHTML = postTemplateFn({postAuthor: postAuthor, postBody: postBody, postTitle: postTitle})
+
+  postDiv.innerHTML+=postHTML
 }
 
 function postComment() {
