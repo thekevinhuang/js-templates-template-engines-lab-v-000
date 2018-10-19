@@ -1,8 +1,8 @@
 function createPost() {
 
-  let postTemplate = document.getElementById('post-template').innerHTML
-  let pageTemplate = document.getElementById('page-template').innerHTML
-  let commentTempalte = document.getElementById('comments-template').innerHTML
+  let postTemplate = _.template(document.getElementById('post-template').innerHTML)
+  let pageTemplate = _.template(document.getElementById('page-template').innerHTML)
+  let commentTemplate = _.template(document.getElementById('comments-template').innerHTML)
 
   let postTitle = document.getElementById('postTitle').value
   let postBody = document.getElementById('postBody').value
@@ -10,18 +10,17 @@ function createPost() {
 
   let mainDiv = document.getElementsByTagName("main")[0]
 
-
-  let pageTemplateFn = _.template(pageTemplate)
-
-  mainDiv.innerHTML += pageTemplateFn()
-
-  let postTemplateFn = _.template(postTemplate)
+  mainDiv.innerHTML += pageTemplate()
 
   let postDiv = document.getElementById("post")
 
-  let postHTML = postTemplateFn({postAuthor: postAuthor, postBody: postBody, postTitle: postTitle})
+  let postHTML = postTemplate({postAuthor: postAuthor, postBody: postBody, postTitle: postTitle})
 
-  postDiv.innerHTML+=postHTML
+  postDiv.innerHTML += postHTML
+  
+  document.getElementsByTagName("footer")[0].innerHTML +=commentTemplate()
+
+  
 }
 
 function postComment() {
